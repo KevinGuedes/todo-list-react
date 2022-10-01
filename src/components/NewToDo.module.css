@@ -43,5 +43,13 @@
 }
 
 .newNewToDoForm button[type='submit']:disabled {
+  opacity: 0.7;
   cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .newNewToDoForm {
+    display: flex;
+    flex-direction: column;
+  }
 }
