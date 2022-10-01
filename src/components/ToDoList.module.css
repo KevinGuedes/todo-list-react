@@ -10,6 +10,14 @@
   margin-bottom: 4rem;
 }
 
+.header div span:last-of-type {
+  background-color: var(--gray-400);
+  color: var(--gray-200);
+  font-size: 0.75rem;
+  padding: 0 0.5rem;
+  border-radius: 999px;
+}
+
 .toDosCreated {
   color: var(--blue);
   font-weight: bold;
@@ -22,14 +30,6 @@
   font-size: 0.875rem;
 }
 
-.toDosCount span {
-  background-color: var(--gray-400);
-  color: var(--gray-200);
-  font-size: 0.75rem;
-  padding: 0 0.5rem;
-  border-radius: 999px;
-}
-
 .emptyToDos {
   border-top: 1px solid var(--gray-400);
   border-radius: 8px;
@@ -39,15 +39,21 @@
   align-items: center;
 }
 
-.emptyToDos span {
-  color: var(--gray-300);
+.emptyToDos div {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.emptyToDos span:first-of-type {
-  margin-top: 1rem;
+.emptyToDos div span {
+  color: var(--gray-300);
+  line-height: 1.4;
+}
+
+.emptyToDos div span:first-of-type {
   font-weight: bold;
 }
 
-.emptyToDos span {
+.emptyToDos div span:last-of-type {
   font-weight: regular;
 }

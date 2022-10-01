@@ -18,8 +18,10 @@ export function ToDoList() {
 
       <section className={styles.emptyToDos}>
         <Clipboard size={56} opacity={0.2} />
-        <span>Você ainda não tem tarefas cadastradas</span>
-        <span>Crie tarefas e organize seus itens a fazer</span>
+        <div>
+          <span>Você ainda não tem tarefas cadastradas</span>
+          <span>Crie tarefas e organize seus itens a fazer</span>
+        </div>
       </section>
     </div>
   )
