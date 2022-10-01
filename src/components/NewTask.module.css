@@ -1,0 +1,47 @@
+.newTaskForm {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  margin-top: calc(0px - 1.6875rem - 0.5px);
+  align-self: center;
+}
+
+.newTaskForm input {
+  resize: none;
+  width: 100%;
+  background: var(--gray-500);
+  height: 3.375rem;
+  border-radius: 8px;
+  padding-left: 1rem;
+  border: 1px solid var(--gray-700);
+  color: var(--gray-100);
+}
+
+.newTaskForm input::placeholder {
+  color: var(--gray-300);
+  margin-right: 1rem;
+}
+
+.newTaskForm button[type='submit'] {
+  background-color: var(--blue-dark);
+  color: var(--gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 0;
+  font-size: 0.875rem;
+  font-weight: bold;
+
+  transition: background-color 0.1s;
+}
+
+.newTaskForm button[type='submit']:not(:disabled):hover {
+  background-color: var(--blue);
+}
+
+.newTaskForm button[type='submit']:disabled {
+  cursor: not-allowed;
+}
