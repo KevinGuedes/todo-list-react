@@ -1,9 +1,15 @@
 import { PlusCircle } from 'phosphor-react'
 import { ChangeEvent, FormEvent, InvalidEvent, useRef, useState } from 'react'
+import { ToDo } from '../App'
 
+import { v4 as createId } from 'uuid'
 import styles from './NewToDo.module.css'
 
-export function NewToDo() {
+interface NewToDoProps {
+  onCreateNewToDo: (toDo: ToDo) => void
+}
+
+export function NewToDo({ onCreateNewToDo }: NewToDoProps) {
   const [newToDo, setNewToDo] = useState('')
   const newToDoInput = useRef<HTMLInputElement>(null)
 
@@ -18,6 +24,13 @@ export function NewToDo() {
 
   function handleCreateNewToDo(event: FormEvent) {
     event.preventDefault()
+
+    onCreateNewToDo({
+      id: createId(),
+      task: newToDo,
+      isCompleted: false,
+    })
+
     setNewToDo('')
     newToDoInput.current?.focus()
   }

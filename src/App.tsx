@@ -1,19 +1,23 @@
 import { Header } from './components/Header'
 import { NewToDo } from './components/NewToDo'
 
+import { useState } from 'react'
 import styles from './App.module.css'
-import { ToDoList } from './components/ToDoList'
+import { ToDosList } from './components/ToDosList'
 import './global.css'
+
+export interface ToDo {
+  id: string
+  task: string
+  isCompleted: boolean
+}
 
 export function App() {
   return (
     <div>
       <Header />
-      <div className={styles.newTaskContainer}>
-        <NewToDo />
-      </div>
-      <main className={styles.toDoListContainer}>
-        <ToDoList />
+      <main className={styles.toDoContainer}>
+        <ToDosList />
       </main>
     </div>
   )
