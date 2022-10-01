@@ -20,6 +20,15 @@
   box-shadow: 0 0 0 2px var(--purple-dark);
 }
 
+::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: var(--gray-300);
+}
+
 * {
   margin: 0;
   padding: 0;

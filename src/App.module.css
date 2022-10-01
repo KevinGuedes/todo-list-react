@@ -1,4 +1,6 @@
 .toDoContainer {
   max-width: 46rem;
   margin: 0 auto;
+  box-sizing: initial;
+  padding: 0 1rem;
 }

@@ -57,22 +57,24 @@ export function ToDosList() {
         </div>
       </header>
 
-      {toDos.length === 0 ? (
-        <EmptyToDos />
-      ) : (
-        <section className={styles.toDosList}>
-          {toDos.map((toDo) => {
-            return (
-              <ToDoItem
-                key={toDo.id}
-                toDo={toDo}
-                onDeleteTodo={deleteTodo}
-                onToggleTodoCompletion={toggleToDoCompletion}
-              />
-            )
-          })}
-        </section>
-      )}
+      <div className={styles.toDosListContainer}>
+        {toDos.length === 0 ? (
+          <EmptyToDos />
+        ) : (
+          <section className={styles.toDosList}>
+            {toDos.map((toDo) => {
+              return (
+                <ToDoItem
+                  key={toDo.id}
+                  toDo={toDo}
+                  onToggleTodoCompletion={toggleToDoCompletion}
+                  onDeleteTodo={deleteTodo}
+                />
+              )
+            })}
+          </section>
+        )}
+      </div>
     </div>
   )
 }

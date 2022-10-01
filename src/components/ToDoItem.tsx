@@ -11,20 +11,23 @@ interface ToDoItemProps {
 
 export function ToDoItem({
   toDo,
-  onDeleteTodo,
   onToggleTodoCompletion,
+  onDeleteTodo,
 }: ToDoItemProps) {
-  function handleDeleteToDo() {
-    onDeleteTodo(toDo.id)
-  }
-
   function handleToggleToDoCompletion() {
     onToggleTodoCompletion(toDo.id)
   }
 
+  function handleDeleteToDo() {
+    onDeleteTodo(toDo.id)
+  }
+
   return (
     <div className={styles.toDoItemContainer}>
-      <button onClick={handleToggleToDoCompletion}></button>
+      <button
+        title="Toggle ToDo Completion"
+        onClick={handleToggleToDoCompletion}
+      ></button>
       {toDo.isCompleted ? (
         <p>
           <s>{toDo.task}</s>

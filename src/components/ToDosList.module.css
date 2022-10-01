@@ -1,7 +1,7 @@
 .header {
   display: flex;
   justify-content: space-between;
-  margin: 4rem 0 1.5rem;
+  margin-top: 4rem;
 }
 
 .header div {
@@ -27,6 +27,11 @@
   color: var(--purple);
   font-size: 0.875rem;
 }
+
+.toDosListContainer {
+  margin: 1.5rem 0;
+}
+
 .toDosList {
   display: flex;
   flex-direction: column;
