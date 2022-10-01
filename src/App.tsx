@@ -1,7 +1,8 @@
 import { Header } from './components/Header'
-import { NewTask } from './components/NewTask'
+import { NewToDo } from './components/NewToDo'
 
 import styles from './App.module.css'
+import { ToDoList } from './components/ToDoList'
 import './global.css'
 
 export function App() {
@@ -9,8 +10,11 @@ export function App() {
     <div>
       <Header />
       <div className={styles.newTaskContainer}>
-        <NewTask />
+        <NewToDo />
       </div>
+      <main className={styles.toDoListContainer}>
+        <ToDoList />
+      </main>
     </div>
   )
 }

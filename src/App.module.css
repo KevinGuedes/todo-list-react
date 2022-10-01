@@ -2,3 +2,10 @@
   max-width: 46rem;
   margin: 0 auto;
 }
+
+.toDoListContainer {
+  max-width: 46rem;
+  margin: 4rem auto 0;
+  margin-top: 4rem;
+  height: 30px;
+}

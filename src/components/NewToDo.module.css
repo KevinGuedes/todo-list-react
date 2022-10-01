@@ -1,4 +1,4 @@
-.newTaskForm {
+.newNewToDoForm {
   width: 100%;
   display: flex;
   gap: 0.5rem;
@@ -6,7 +6,7 @@
   align-self: center;
 }
 
-.newTaskForm input {
+.newNewToDoForm input {
   resize: none;
   width: 100%;
   background: var(--gray-500);
@@ -17,12 +17,12 @@
   color: var(--gray-100);
 }
 
-.newTaskForm input::placeholder {
+.newNewToDoForm input::placeholder {
   color: var(--gray-300);
   margin-right: 1rem;
 }
 
-.newTaskForm button[type='submit'] {
+.newNewToDoForm button[type='submit'] {
   background-color: var(--blue-dark);
   color: var(--gray-100);
   display: flex;
@@ -38,10 +38,10 @@
   transition: background-color 0.1s;
 }
 
-.newTaskForm button[type='submit']:not(:disabled):hover {
+.newNewToDoForm button[type='submit']:not(:disabled):hover {
   background-color: var(--blue);
 }
 
-.newTaskForm button[type='submit']:disabled {
+.newNewToDoForm button[type='submit']:disabled {
   cursor: not-allowed;
 }
