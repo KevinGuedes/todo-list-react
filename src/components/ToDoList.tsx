@@ -6,12 +6,12 @@ export function ToDoList() {
     <div>
       <header className={styles.header}>
         <div className={styles.toDosCount}>
-          <p className={styles.toDosCreated}>Tarefas Criadas</p>
+          <strong className={styles.toDosCreated}>Tarefas Criadas</strong>
           <span>10</span>
         </div>
 
         <div className={styles.toDosCount}>
-          <p className={styles.toDosCompleted}>Concluídas</p>
+          <strong className={styles.toDosCompleted}>Concluídas</strong>
           <span>10</span>
         </div>
       </header>
@@ -19,7 +19,7 @@ export function ToDoList() {
       <section className={styles.emptyToDos}>
         <Clipboard size={56} opacity={0.2} />
         <div>
-          <span>Você ainda não tem tarefas cadastradas</span>
+          <strong>Você ainda não tem tarefas cadastradas</strong>
           <span>Crie tarefas e organize seus itens a fazer</span>
         </div>
       </section>

@@ -5,12 +5,12 @@
 
 .header div {
   display: flex;
-  gap: 0.5rem;
   align-items: center;
+  gap: 0.5rem;
   margin-bottom: 4rem;
 }
 
-.header div span:last-of-type {
+.header div span {
   background-color: var(--gray-400);
   color: var(--gray-200);
   font-size: 0.75rem;
@@ -20,40 +20,36 @@
 
 .toDosCreated {
   color: var(--blue);
-  font-weight: bold;
   font-size: 0.875rem;
 }
 
 .toDosCompleted {
   color: var(--purple);
-  font-weight: bold;
   font-size: 0.875rem;
 }
 
 .emptyToDos {
-  border-top: 1px solid var(--gray-400);
-  border-radius: 8px;
-  padding: 4rem 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-top: 1px solid var(--gray-400);
+  border-radius: 8px;
+  padding: 4rem 1.5rem;
 }
 
 .emptyToDos div {
-  margin-top: 1rem;
   display: flex;
   flex-direction: column;
+  margin-top: 1rem;
 }
 
-.emptyToDos div span {
+.emptyToDos div strong {
   color: var(--gray-300);
   line-height: 1.4;
 }
 
-.emptyToDos div span:first-of-type {
-  font-weight: bold;
-}
-
-.emptyToDos div span:last-of-type {
+.emptyToDos div span {
+  color: var(--gray-300);
   font-weight: regular;
+  line-height: 1.4;
 }
