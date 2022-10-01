@@ -47,9 +47,13 @@ export function ToDosList() {
 
         <div className={styles.toDosCount}>
           <strong className={styles.toDosCompleted}>Concluídas</strong>
-          <span>
-            {completedToDosCount} de {toDos.length}
-          </span>
+          {toDos.length === 0 ? (
+            <span>0</span>
+          ) : (
+            <span>
+              {completedToDosCount} de {toDos.length}
+            </span>
+          )}
         </div>
       </header>
 
