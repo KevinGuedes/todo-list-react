@@ -21,7 +21,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 0.3rem;
+  width: 0.4rem;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -39,6 +39,7 @@ body {
   background: var(--gray-600);
   color: var(--gray-100);
   -webkit-font-smoothing: antialiased;
+  overflow: hidden;
 }
 
 body,

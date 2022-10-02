@@ -49,7 +49,7 @@
 
 @media (max-width: 768px) {
   .newNewToDoForm {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }

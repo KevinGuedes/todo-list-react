@@ -7,10 +7,19 @@ import { ToDoItem } from './ToDoItem'
 import styles from './ToDosList.module.css'
 
 export function ToDosList() {
-  const [toDos, setToDos] = useState<ToDo[]>([])
+  const [toDos, setToDos] = useState<ToDo[]>(
+    Array.from(new Array(20)).map(
+      (_, i) =>
+        ({
+          id: `${i}-saldjsakl`,
+          task: 'Task' + i,
+          isCompleted: false,
+        } as ToDo)
+    )
+  )
 
   function createNewTodo(newToDo: ToDo) {
-    setToDos([...toDos, newToDo])
+    setToDos([newToDo, ...toDos])
   }
 
   function deleteTodo(toDoId: string) {
@@ -36,7 +45,7 @@ export function ToDosList() {
   )
 
   return (
-    <div>
+    <>
       <NewToDo onCreateNewToDo={createNewTodo} />
 
       <header className={styles.header}>
@@ -75,6 +84,6 @@ export function ToDosList() {
           </section>
         )}
       </div>
-    </div>
+    </>
   )
 }
