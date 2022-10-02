@@ -20,7 +20,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 0.4rem;
+  max-width: 8px;
 }
 
 ::-webkit-scrollbar-thumb {

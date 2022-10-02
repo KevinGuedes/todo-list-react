@@ -56,7 +56,7 @@ export function ToDoItem({
         className={styles.trashButton}
         onClick={handleDeleteToDo}
       >
-        <Trash size={16} />
+        <Trash size={18} />
       </button>
     </div>
   )
