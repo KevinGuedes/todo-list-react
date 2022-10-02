@@ -1,4 +1,4 @@
-import { Trash } from 'phosphor-react'
+import { Check, Circle, Trash } from 'phosphor-react'
 import { ToDo } from './ToDosList'
 
 import styles from './ToDo.module.css'
@@ -24,18 +24,38 @@ export function ToDoItem({
 
   return (
     <div className={styles.toDoItemContainer}>
-      <button
-        title="Toggle ToDo Completion"
-        onClick={handleToggleToDoCompletion}
-      ></button>
       {toDo.isCompleted ? (
-        <p>
-          <s>{toDo.task}</s>
-        </p>
+        <div>
+          <button
+            title="Reabrir ToDo"
+            className={styles.reopenToDo}
+            onClick={handleToggleToDoCompletion}
+          >
+            <Check size={18} weight="bold" />
+          </button>
+          <p>
+            {' '}
+            <s>{toDo.task}</s>
+          </p>
+        </div>
       ) : (
-        <p>{toDo.task}</p>
+        <div>
+          <button
+            title="Concluir ToDo"
+            className={styles.completeToDo}
+            onClick={handleToggleToDoCompletion}
+          >
+            <Circle size={18} />
+          </button>
+          <p>{toDo.task}</p>
+        </div>
       )}
-      <button title="Delete ToDo" onClick={handleDeleteToDo}>
+
+      <button
+        title="Deletar ToDo"
+        className={styles.trashButton}
+        onClick={handleDeleteToDo}
+      >
         <Trash size={16} />
       </button>
     </div>

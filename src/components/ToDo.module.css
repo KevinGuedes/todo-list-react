@@ -11,18 +11,26 @@
   border-radius: 8px;
 }
 
-.toDoItemContainer p {
+.toDoItemContainer div {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.toDoItemContainer div p {
   color: var(--gray-100);
   flex: 1;
   font-size: 0.875rem;
   line-height: 1.4;
 }
 
-.toDoItemContainer s {
+.toDoItemContainer div s {
   color: var(--gray-300);
 }
 
-.toDoItemContainer button {
+.trashButton {
   color: var(--gray-300);
   background: transparent;
   border: 0;
@@ -33,7 +41,55 @@
   border-radius: 4px;
 }
 
-.toDoItemContainer button:hover {
-  background-color: var(--gray-400);
+.trashButton:hover {
   color: var(--danger);
+}
+
+.completeToDo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: transparent;
+  line-height: 0;
+  border: 0;
+  border-radius: 4px;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.completeToDo svg {
+  border-radius: 50%;
+  color: transparent;
+  border: 2px solid var(--blue);
+}
+
+.completeToDo svg:hover {
+  border: 2px solid var(--blue-dark);
+  background-color: var(--blue-dark-blured);
+}
+
+.reopenToDo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: transparent;
+  line-height: 0;
+  border: 0;
+  border-radius: 4px;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.reopenToDo svg {
+  color: var(--gray-100);
+  background-color: var(--purple-dark);
+  border: 3px solid var(--purple-dark);
+  border-radius: 50%;
+}
+
+.reopenToDo svg:hover {
+  background-color: var(--purple);
+  border: 3px solid var(--purple);
 }
