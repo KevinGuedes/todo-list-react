@@ -42,6 +42,7 @@
 }
 
 .trashButton:hover {
+  background-color: var(--gray-400);
   color: var(--danger);
 }
 
