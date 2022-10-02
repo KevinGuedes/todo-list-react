@@ -1,22 +1,19 @@
 import { useState } from 'react'
-import { ToDo } from '../App'
+
 import { EmptyToDos } from './EmptyToDos'
 import { NewToDo } from './NewToDo'
 import { ToDoItem } from './ToDoItem'
 
 import styles from './ToDosList.module.css'
 
+export interface ToDo {
+  id: string
+  task: string
+  isCompleted: boolean
+}
+
 export function ToDosList() {
-  const [toDos, setToDos] = useState<ToDo[]>(
-    Array.from(new Array(20)).map(
-      (_, i) =>
-        ({
-          id: `${i}-saldjsakl`,
-          task: 'Task' + i,
-          isCompleted: false,
-        } as ToDo)
-    )
-  )
+  const [toDos, setToDos] = useState<ToDo[]>([])
 
   function createNewTodo(newToDo: ToDo) {
     setToDos([newToDo, ...toDos])
@@ -66,10 +63,10 @@ export function ToDosList() {
         </div>
       </header>
 
-      <div className={styles.toDosListContainer}>
-        {toDos.length === 0 ? (
-          <EmptyToDos />
-        ) : (
+      {toDos.length === 0 ? (
+        <EmptyToDos />
+      ) : (
+        <div className={styles.toDosListContainer}>
           <section className={styles.toDosList}>
             {toDos.map((toDo) => {
               return (
@@ -82,8 +79,8 @@ export function ToDosList() {
               )
             })}
           </section>
-        )}
-      </div>
+        </div>
+      )}
     </>
   )
 }

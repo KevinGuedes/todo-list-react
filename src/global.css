@@ -16,8 +16,7 @@
 }
 
 :focus {
-  outline: transparent;
-  box-shadow: 0 0 0 2px var(--purple-dark);
+  outline: 2px solid var(--purple-dark);
 }
 
 ::-webkit-scrollbar {
@@ -27,6 +26,14 @@
 ::-webkit-scrollbar-thumb {
   border-radius: 8px;
   background-color: var(--gray-300);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--gray-200);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--gray-100);
 }
 
 * {
@@ -39,7 +46,6 @@ body {
   background: var(--gray-600);
   color: var(--gray-100);
   -webkit-font-smoothing: antialiased;
-  overflow: hidden;
 }
 
 body,

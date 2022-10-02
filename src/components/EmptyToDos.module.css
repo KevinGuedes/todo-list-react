@@ -23,3 +23,10 @@
   font-weight: regular;
   line-height: 1.4;
 }
+
+@media (max-width: 768px) {
+  .emptyToDos div span,
+  .emptyToDos div strong {
+    text-align: center;
+  }
+}

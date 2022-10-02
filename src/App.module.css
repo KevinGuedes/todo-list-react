@@ -1,9 +1,8 @@
 .toDoContainer {
   max-width: calc(46rem + 2rem);
+  height: calc(100vh - 12.5rem);
   margin: 0 auto;
-  padding: 0 1rem;
-  height: calc(100vh - 10.5rem);
+  padding: 0 1rem 1rem;
   display: flex;
   flex-direction: column;
-  padding-bottom: 2rem;
 }

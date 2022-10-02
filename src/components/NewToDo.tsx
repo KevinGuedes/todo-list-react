@@ -1,8 +1,9 @@
+import { v4 as createId } from 'uuid'
+
 import { PlusCircle } from 'phosphor-react'
 import { ChangeEvent, FormEvent, InvalidEvent, useRef, useState } from 'react'
-import { ToDo } from '../App'
+import { ToDo } from './ToDosList'
 
-import { v4 as createId } from 'uuid'
 import styles from './NewToDo.module.css'
 
 interface NewToDoProps {
@@ -18,7 +19,7 @@ export function NewToDo({ onCreateNewToDo }: NewToDoProps) {
     setNewToDo(event.target.value)
   }
 
-  function handleInvalidNewNewToDo(event: InvalidEvent<HTMLInputElement>) {
+  function handleInvalidNewToDo(event: InvalidEvent<HTMLInputElement>) {
     event.target.setCustomValidity('Este campo é obrigatório')
   }
 
@@ -35,10 +36,10 @@ export function NewToDo({ onCreateNewToDo }: NewToDoProps) {
     newToDoInput.current?.focus()
   }
 
-  const isNewNewToDoEmpty = newToDo.length === 0
+  const isNewToDoEmpty = newToDo.length === 0
 
   return (
-    <form className={styles.newNewToDoForm} onSubmit={handleCreateNewToDo}>
+    <form className={styles.newToDoForm} onSubmit={handleCreateNewToDo}>
       <input
         name="todo"
         placeholder="Adicione uma nova tarefa"
@@ -46,9 +47,9 @@ export function NewToDo({ onCreateNewToDo }: NewToDoProps) {
         ref={newToDoInput}
         value={newToDo}
         onChange={handleNewToDoChange}
-        onInvalid={handleInvalidNewNewToDo}
+        onInvalid={handleInvalidNewToDo}
       />
-      <button type="submit" disabled={isNewNewToDoEmpty}>
+      <button type="submit" disabled={isNewToDoEmpty}>
         Criar
         <PlusCircle size={20} />
       </button>

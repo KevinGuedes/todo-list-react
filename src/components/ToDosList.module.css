@@ -1,7 +1,7 @@
 .header {
   display: flex;
   justify-content: space-between;
-  margin-top: 4rem;
+  margin: 4rem 0 1.5rem;
 }
 
 .header div {
@@ -29,7 +29,6 @@
 }
 
 .toDosListContainer {
-  margin: 1.5rem 0;
   flex-grow: 1;
   overflow: auto;
 }
@@ -37,5 +36,4 @@
 .toDosList {
   display: grid;
   gap: 0.75rem;
-  margin-right: 0.5rem;
 }

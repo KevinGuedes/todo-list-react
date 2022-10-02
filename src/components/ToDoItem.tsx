@@ -1,5 +1,5 @@
 import { Trash } from 'phosphor-react'
-import { ToDo } from '../App'
+import { ToDo } from './ToDosList'
 
 import styles from './ToDo.module.css'
 
