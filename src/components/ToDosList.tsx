@@ -16,7 +16,7 @@ export function ToDosList() {
   const [toDos, setToDos] = useState<ToDo[]>([])
 
   function createNewTodo(newToDo: ToDo) {
-    setToDos([newToDo, ...toDos])
+    setToDos(state => [newToDo, ...state])
   }
 
   function deleteTodo(toDoId: string) {
