@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import superjson from 'superjson';
 
 import { EmptyToDos } from './EmptyToDos'
 import { NewToDo } from './NewToDo'
 import { ToDoItem } from './ToDoItem'
+
 
 import styles from './ToDosList.module.css'
 
@@ -13,7 +15,15 @@ export interface ToDo {
 }
 
 export function ToDosList() {
-  const [toDos, setToDos] = useState<ToDo[]>([])
+  const [toDos, setToDos] = useState<ToDo[]>(() => {
+    const storedToDosAsJSON = localStorage.getItem('@todos-list:todos-v1.0.0')
+
+    if(storedToDosAsJSON){
+      return superjson.parse<ToDo[]>(storedToDosAsJSON)
+    }
+
+    return []
+  })
 
   function createNewTodo(newToDo: ToDo) {
     setToDos(state => [newToDo, ...state])
@@ -40,6 +50,11 @@ export function ToDosList() {
     },
     0
   )
+
+  useEffect(() => {
+    const toDosAsJSON = superjson.stringify(toDos)
+    localStorage.setItem('@todos-list:todos-v1.0.0', toDosAsJSON)
+  }, [toDos])
 
   return (
     <>
