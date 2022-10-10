@@ -1,7 +1,7 @@
 import { Check, Circle, Trash } from 'phosphor-react'
 import { ToDo } from './ToDosList'
 
-import styles from './ToDo.module.css'
+import styles from './ToDoItem.module.css'
 
 interface ToDoItemProps {
   toDo: ToDo
@@ -34,7 +34,6 @@ export function ToDoItem({
             <Check size={18} weight="bold" />
           </button>
           <p>
-            {' '}
             <s>{toDo.task}</s>
           </p>
         </div>
